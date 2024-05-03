@@ -1,0 +1,9 @@
+[Unit]
+Description=HASHTOPOLIS STARTUP
+After=hive.service
+
+[Service]
+ExecStart=/root/hashtopolis/hashtopolis_startup.sh
+
+[Install]
+WantedBy=default.target
