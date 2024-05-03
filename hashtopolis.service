@@ -3,7 +3,7 @@ Description=HASHTOPOLIS STARTUP
 After=hive.service
 
 [Service]
-ExecStart=/root/hashtopolis/hashtopolis_startup.sh
+ExecStart=/hashtopolis/hashtopolis_startup.sh
 
 [Install]
 WantedBy=default.target
