@@ -1,4 +1,4 @@
 #!/bin/bash
 
-systemctl start hashtopolis
+python3 'agents.php?download=1' 
 echo "------ HASHTOPOLIS STARTED SUCCESFULLY DURING STARTUP ------"
