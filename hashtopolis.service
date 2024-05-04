@@ -1,9 +1,16 @@
 [Unit]
-Description=HASHTOPOLIS STARTUP
-After=hive.service
+Description=Hashtopolis Startup
+After=network.target
+StartLimitIntervalSec=0
 
 [Service]
-ExecStart=/hashtopolis/hashtopolis_startup.sh
+Type=simple
+Restart=always
+RestartSec=10
+User=root
+ExecStart=/usr/bin/python3 /hashtopolis/'agents.php?download=1'
+StandardInput=tty-force
+WorkingDirectory=/hashtopolis/
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
